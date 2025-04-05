@@ -227,6 +227,8 @@ graph TD
     style C fill:#ff4757
     style D fill:#ffa502
     style N fill:#8e44ad
+```
+
 ---
 
 🔙 [К оглавлению](#оглавление)
