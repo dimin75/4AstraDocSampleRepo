@@ -14,7 +14,8 @@
 8. [Мониторинг](#мониторинг)  
 9. [Интеграция с LDAP](#интеграция)  
 10. [CLI-утилиты](#cli-утилиты)  
-
+11. [Аналоги системы](#аналоги)
+    
 ---
 
 <a name="требования"></a>
@@ -140,7 +141,59 @@ ald-pro-cli user list
 # Экспорт конфигурации  
 ald-pro-cli config export --output config-backup.json  
 ```
-<a name="github"></a>
+---
+
+<a name="аналоги"></a>
+
+## Аналоги ALD Pro с поддержкой Linux/Windows/Mac
+
+### Linux-ориентированные решения
+- **FreeIPA**  
+  `LDAP + Kerberos + DNS` · RBAC · Автоматизация · Совместимость с AD  
+  *Используется в RHEL Identity Management*
+
+- **Samba AD**  
+  `AD-совместимость` · GPO · Межплатформенная аутентификация  
+  *Реализация на базе SMB протокола*
+
+- **OpenLDAP + MIT Kerberos**  
+  Базовый стек для каталогов · Требует кастомизации
+
+### Windows-экосистема
+- **Microsoft Active Directory**  
+  `Gold Standard` · Group Policies · ADFS  
+  *Полная интеграция с Windows Server*
+
+- **Zentyal Development Server**  
+  `Ubuntu-based` · AD-совместимый · DHCP/DNS/File Services
+
+- **Univention Corporate Server**  
+  Немецкая разработка · Поддержка образовательных сценариев
+
+### MacOS-решения
+- **Apple Open Directory**  
+  Нативная служба macOS Server · MDM-интеграция
+
+- **JumpCloud**  
+  `SaaS` · Кроссплатформенное управление · SCIM/RADIUS
+
+### Универсальные системы
+| Система               | Поддержка ОС          | Ключевые особенности                 |
+|-----------------------|-----------------------|--------------------------------------|
+| **ManageEngine AD360**| Windows/Linux/Mac     | Гибридные среды · Единая консоль     |
+| **Centrify**          | Кроссплатформенная    | PAM · Zero Trust архитектура         |
+| **Azure AD Connect**  | Cloud + Hybrid        | Синхронизация с облаком              |
+
+### Рекомендации по выбору
+```bash
+# Для Linux-сред
+sudo apt install freeipa-server keycloak
+
+# Гибридные среды (Windows + Linux)
+apt install samba winbind krb5-user
+
+# Облачная интеграция
+curl -O https://jumpcloud.com/tools/install.sh
 
 ---
 
