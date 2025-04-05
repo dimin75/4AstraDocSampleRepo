@@ -194,6 +194,7 @@ apt install samba winbind krb5-user
 
 # Облачная интеграция
 curl -O https://jumpcloud.com/tools/install.sh
+```
 
 ---
 
